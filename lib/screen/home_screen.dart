@@ -3,14 +3,11 @@ import 'package:swing/card/gameschedule_card.dart';
 import 'package:swing/component/gameresult_bar.dart';
 import 'package:swing/component/gameschedule_bar.dart';
 import 'package:swing/component/top_bar.dart';
-import 'package:swing/screen/game_detail_screen.dart';
-
 import '../card/gameresult_card.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: SafeArea(

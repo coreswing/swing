@@ -13,7 +13,12 @@ class GameScheduleCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => GameDetailScreen()),
+          MaterialPageRoute(
+            builder: (context) => GameDetailScreen(
+              team1: team1,
+              team2: team2,
+            ),
+          ),
         );
       },
       child: Container(
@@ -58,6 +63,6 @@ class GameScheduleCard extends StatelessWidget {
           ],
         ),
       ),
-    );//
+    ); //
   }
 }

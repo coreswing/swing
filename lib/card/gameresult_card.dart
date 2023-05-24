@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../screen/crollingtest.dart';
 import '../screen/game_detail_screen.dart';
 
 class GameResultCard extends StatelessWidget {
@@ -14,7 +14,12 @@ class GameResultCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => GameDetailScreen()),
+          MaterialPageRoute(
+              builder: (context) => GameDetailScreen(
+                    team1: team1,
+                    team2: team2,
+                  )),
+          //MaterialPageRoute(builder: (context) => fetchSeoulTemperature()),
         );
       },
       child: Padding(
@@ -72,4 +77,3 @@ class GameResultCard extends StatelessWidget {
     );
   }
 }
-
