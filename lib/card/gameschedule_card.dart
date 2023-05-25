@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:swing/screen/game_detail_screen.dart';
+import 'package:swing/screen/team_seletion.dart';
+
+import '../component/top_bar.dart';
 
 class GameScheduleCard extends StatelessWidget {
   final String team1;
@@ -35,7 +38,7 @@ class GameScheduleCard extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(16.0),
           border: Border.all(
-            color: Colors.grey,
+            color: Colors.red,
             width: 2,
           ),
         ),
@@ -54,7 +57,7 @@ class GameScheduleCard extends StatelessWidget {
                       height: 80, // 이미지의 세로 크기 지정
                     ),
                     Text(
-                      '한화 이글스',
+                      '$team1',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -90,7 +93,7 @@ class GameScheduleCard extends StatelessWidget {
                       height: 80, // 이미지의 세로 크기 지정
                     ),
                     Text(
-                      '롯데 자이언츠',
+                      '$team2',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),

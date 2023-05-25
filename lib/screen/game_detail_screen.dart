@@ -16,6 +16,7 @@ class GameDetailScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TopBar(
               title: 'Swing',

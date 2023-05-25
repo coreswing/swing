@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:swing/screen/team_seletion.dart';
 import '../screen/crollingtest.dart';
 import '../screen/game_detail_screen.dart';
 
 class GameResultCard extends StatelessWidget {
   final String team1;
   final String team2;
+  final String img1;
+  final String img2;
 
-  GameResultCard({required this.team1, required this.team2});
+  GameResultCard({
+    required this.team1,
+    required this.team2,
+    required this.img1,
+    required this.img2,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +22,7 @@ class GameResultCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-              builder: (context) => GameDetailScreen(
-                    team1: team1,
-                    team2: team2,
-                  )),
+          MaterialPageRoute(builder: (context) => TeamSelect()),
           //MaterialPageRoute(builder: (context) => fetchSeoulTemperature()),
         );
       },
@@ -29,7 +33,7 @@ class GameResultCard extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(16.0),
             border: Border.all(
-              color: Colors.grey,
+              color: Colors.red,
               width: 2,
             ),
           ),
@@ -42,12 +46,18 @@ class GameResultCard extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Image(
-                        image: AssetImage('assets/img/hanhwa.png'), // 이미지 경로 설정
-                        width: 80, // 이미지의 가로 크기 지정
-                        height: 80, // 이미지의 세로 크기 지정
+                      Column(
+                        children: [
+                          Image(
+                            image: AssetImage('assets/img/$img1.png'),
+                            // 이미지 경로 설정
+                            width: 80,
+                            // 이미지의 가로 크기 지정
+                            height: 80, // 이미지의 세로 크기 지정
+                          ),
+                          Text('$team1'),
+                        ],
                       ),
-
                     ],
                   ),
                   Text(
@@ -71,10 +81,15 @@ class GameResultCard extends StatelessWidget {
                       fontSize: 30,
                     ),
                   ),
-                  Image(
-                    image: AssetImage('assets/img/lotte.png'), // 이미지 경로 설정
-                    width: 80, // 이미지의 가로 크기 지정
-                    height: 80, // 이미지의 세로 크기 지정
+                  Column(
+                    children: [
+                      Image(
+                        image: AssetImage('assets/img/$img2.png'), // 이미지 경로 설정
+                        width: 80, // 이미지의 가로 크기 지정
+                        height: 80, // 이미지의 세로 크기 지정
+                      ),
+                      Text('$team2'),
+                    ],
                   ),
                 ],
               ),
