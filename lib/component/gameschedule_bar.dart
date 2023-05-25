@@ -11,7 +11,7 @@ class GameScheduleBar extends StatefulWidget {
 
 class _GameScheduleBarState extends State<GameScheduleBar> {
   final PageController _pageController = PageController(viewportFraction: 0.8);
-  double? currentPageValue = 2.0;
+  double? currentPageValue = 1.0;
 
   @override
   void initState() {

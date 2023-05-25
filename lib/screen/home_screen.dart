@@ -20,9 +20,14 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             SizedBox(
-              width: 16.0,
+              height: 8.0,
             ),
-            Text('오늘의 경기'),
+            Text(
+              '오늘의 경기',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(
               width: 16.0,
             ),
@@ -31,29 +36,49 @@ class HomeScreen extends StatelessWidget {
                 GameScheduleCard(
                   team1: '롯데',
                   team2: '한화',
+                  year: 2023,
+                  month: 5,
+                  day: 23,
                 ),
                 GameScheduleCard(
                   team1: '롯데',
                   team2: '한화',
+                  year: 2023,
+                  month: 5,
+                  day: 23,
                 ),
                 GameScheduleCard(
                   team1: '롯데',
                   team2: '한화',
+                  year: 2023,
+                  month: 5,
+                  day: 23,
                 ),
                 GameScheduleCard(
                   team1: '롯데',
                   team2: '한화',
+                  year: 2023,
+                  month: 5,
+                  day: 23,
                 ),
                 GameScheduleCard(
                   team1: '롯데',
                   team2: '한화',
+                  year: 2023,
+                  month: 5,
+                  day: 23,
                 ),
               ],
             ),
             SizedBox(
               width: 16.0,
             ),
-            Text('지난 경기결과'),
+            Text(
+              '지난 경기 결과',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(
               width: 16.0,
             ),

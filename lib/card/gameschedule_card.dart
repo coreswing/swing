@@ -4,8 +4,17 @@ import 'package:swing/screen/game_detail_screen.dart';
 class GameScheduleCard extends StatelessWidget {
   final String team1;
   final String team2;
+  final int year;
+  final int month;
+  final int day;
 
-  GameScheduleCard({required this.team1, required this.team2});
+  GameScheduleCard({
+    required this.team1,
+    required this.team2,
+    required this.year,
+    required this.month,
+    required this.day,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,40 +34,72 @@ class GameScheduleCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16.0),
+          border: Border.all(
+            color: Colors.grey,
+            width: 2,
+          ),
         ),
-        width: 300,
+        width: double.infinity,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                '$team1 vs. $team2',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Image(
+                      image: AssetImage('assets/img/hanhwa.png'), // 이미지 경로 설정
+                      width: 80, // 이미지의 가로 크기 지정
+                      height: 80, // 이미지의 세로 크기 지정
+                    ),
+                    Text(
+                      '한화 이글스',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+                Text(
+                  '8',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
+                ),
+                Text(
+                  'vs',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                Text(
+                  '3',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
+                ),
+                Column(
+                  children: [
+                    Image(
+                      image: AssetImage('assets/img/lotte.png'), // 이미지 경로 설정
+                      width: 80, // 이미지의 가로 크기 지정
+                      height: 80, // 이미지의 세로 크기 지정
+                    ),
+                    Text(
+                      '롯데 자이언츠',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             SizedBox(height: 10),
-            Text(
-              '경기 일자: 2023년 5월 14일',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            Text(
-              '경기 시간: 6:30 PM',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              '장소: 인천 SK 행복드림구장',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
             SizedBox(height: 10),
           ],
         ),
