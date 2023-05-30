@@ -25,7 +25,7 @@ class PlayerInfo extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
+                    .asset(
                     'assets/img/chae.png',
                     width: 120,
                   ),
