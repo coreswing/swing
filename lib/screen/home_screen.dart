@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                   GameResultCard(
                     team1: '한화',
                     team2: 'KIA',
-                    img1: 'hanhw',
+                    img1: 'hanhwa',
                     img2: 'kia',
                   ),
                   GameResultCard(
